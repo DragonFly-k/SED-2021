@@ -1,0 +1,54 @@
+real def fact (real numb)
+[
+   create real result;
+   result = 0z1011;
+
+   if (numb > result)
+   {
+   result = result * numb;
+   numb = numb - 0z1;
+   };
+
+   out result;
+];
+
+char def task(char t, char e)
+[
+   create char dest;
+   create real len;
+
+   dest = StrConcat(t,e);
+   len =  stringLen(dest);
+
+   write len;
+   out dest;
+];
+
+start
+[
+   write 'Control example';
+   create real a;
+   create real b;
+   create real c;
+   a=0z101;
+   b=0z10;
+
+   if (a = b)
+   {
+     write 'a is bigger than b';
+   }
+   else
+   {
+     write 'b is bigger than a';
+   };
+
+   write 'Combine two strings and output their length';
+   create char first;
+   create char second;
+   second = 'HELLO,jdjfslkf ';
+   first = 'WORLD!dsghj';
+   write task(first,second);
+   write fact(0z111010);
+   write 'Control example completed successfully';
+   out 0;
+];
